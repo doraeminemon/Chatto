@@ -48,7 +48,7 @@ public struct AccessoryViewRevealerConfig {
     }
 }
 
-class AccessoryViewRevealer: NSObject, UIGestureRecognizerDelegate {
+public class AccessoryViewRevealer: NSObject, UIGestureRecognizerDelegate {
 
     private let panRecognizer: UIPanGestureRecognizer = UIPanGestureRecognizer()
     private let collectionView: UICollectionView
@@ -89,11 +89,11 @@ class AccessoryViewRevealer: NSObject, UIGestureRecognizerDelegate {
         }
     }
 
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer != self.panRecognizer {
             return true
         }
