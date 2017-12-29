@@ -72,7 +72,7 @@ extension BaseChatViewController {
         return false
     }
 
-    public func visibleRect() -> CGRect {
+    open func visibleRect() -> CGRect {
         let contentInset = self.collectionView.contentInset
         let collectionViewBounds = self.collectionView.bounds
         let contentSize = self.collectionView.collectionViewLayout.collectionViewContentSize
